@@ -42,7 +42,8 @@ class QuizPresenter {
       view?.updateUICorrectAnswer(option: option.rawValue)
     } else {
       //This is wrong answer
-      view?.updateUIWrongAnswer(option: option.rawValue)
+      view?.updateUIWrongAnswer(option: option.rawValue,
+                                correctOption: questions[questionIndex].correctAnswer)
     }
     
     questionIndex+=1

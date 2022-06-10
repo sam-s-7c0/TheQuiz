@@ -36,6 +36,7 @@ class QuizViewController: UIViewController {
 // MARK: - QuizViewInterface
 
 extension QuizViewController: QuizViewInterface {
+  
   func updateHeaderStatus(currentQuestionIndex: Int,
                           totalQuestionCount: Int,
                           totalScore: Int) {
@@ -87,7 +88,8 @@ extension QuizViewController: QuizViewInterface {
     }
   }
   
-  func updateUIWrongAnswer(option: String) {
+  func updateUIWrongAnswer(option: String,
+                           correctOption: String) {
     switch option {
     case "A":
       optionA.borderColor = .red
@@ -97,6 +99,19 @@ extension QuizViewController: QuizViewInterface {
       optionC.borderColor = .red
     case "D":
       optionD.borderColor = .red
+    default:
+      break
+    }
+    
+    switch correctOption {
+    case "A":
+      optionA.borderColor = .green
+    case "B":
+      optionB.borderColor = .green
+    case "C":
+      optionC.borderColor = .green
+    case "D":
+      optionD.borderColor = .green
     default:
       break
     }
