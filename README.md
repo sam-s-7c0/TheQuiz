@@ -1,3 +1,4 @@
+
 # Description
 This is demo application. This demonstrates iOS App.
 
@@ -10,13 +11,12 @@ git clone git@github.com:sam-s-7c0/TheQuiz.git
 Open TheQuiz.xcodeproj
 Run
 
-#Improvements
+# Improvements
 
- Markup : * Usage of CoreData or Realm to store data.
-          * Localization 
-          * Improve Documentation 
-          * Usage of Network library or improve API Client 
-          * Implement Unit Tests 
-          * Implement UI Tests 
-          * Usage of Swiftlint
-        
+ - Usage of CoreData or Realm to store data.
+ - Localization
+ - Improve Documentation
+ - Usage of Network library or improve API Client
+ - Implement Unit Tests
+ - Implement UI Tests
+ - Usage of Swiftlint
