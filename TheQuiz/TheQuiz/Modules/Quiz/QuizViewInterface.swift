@@ -12,7 +12,7 @@ import UIKit
 protocol QuizViewInterface: AnyObject {
   func updateQuestion(question: Question)
   func updateUICorrectAnswer(option: String)
-  func updateUIWrongAnswer(option: String)
+  func updateUIWrongAnswer(option: String, correctOption: String)
   func resetOptions()
   func disableOptions()
   func enableOptions()
