@@ -39,5 +39,6 @@ extension String: StringConvertible { // allow string as storyboard name
 
 enum StoryboardName: String, StringConvertible {
     case main = "Main"
+  case quiz = "Quiz"
     //...
 }

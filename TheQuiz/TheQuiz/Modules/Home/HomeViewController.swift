@@ -10,9 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
   // MARK: - Properties
   
-  @IBOutlet weak var stackviewScore: UIStackView!
   @IBOutlet private weak var labelHighscore: UILabel!
   @IBOutlet private weak var buttonStartGame: UIButton!
+  
   var presenter: HomePresenterInterface?
   
   override func viewDidLoad() {
@@ -21,19 +21,34 @@ class HomeViewController: UIViewController {
     presenter?.viewDidLoad()
   }
   
-  @IBAction func actionStartGame(_ sender: UIButton) {
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
+    presenter?.viewWillAppear()
+  }
+  
+  @IBAction func actionStartGame(_ sender: UIButton) {
+    presenter?.startGame()
   }
 }
 
 // MARK: - HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
+  func updateHighestScore(highestScore: Int) {
+    if highestScore > 0 {
+      self.labelHighscore.text = "\(highestScore) Punkte"
+    }
+  }
+  
   func showError(error: String) {
     DispatchQueue.main.async {
-    let alertView = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "Ok", style: .default)
-    alertView.addAction(okAction)
+      let alertView = UIAlertController(title: "Error",
+                                        message: error,
+                                        preferredStyle: .alert)
+      let okAction = UIAlertAction(title: "Ok",
+                                   style: .default)
+      alertView.addAction(okAction)
       self.present(alertView, animated: true)
     }
   }
@@ -51,19 +66,7 @@ extension HomeViewController: HomeViewInterface {
       self.buttonStartGame.isEnabled = true
     }
   }
-  
-  func showScore() {
-    DispatchQueue.main.async {
-      self.stackviewScore.isHidden = false
-    }
-  }
-  
-  func hideScore() {
-    DispatchQueue.main.async {
-      self.stackviewScore.isHidden = true
-    }
-  }
-  
+    
   func updateScore(score: String) {
     labelHighscore.text = score
   }

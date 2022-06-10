@@ -22,6 +22,16 @@ class HomePresenter {
 // MARK: - HomePresenterInterface
 
 extension HomePresenter: HomePresenterInterface {
+  
+  func viewDidLoad() {
+    view?.disableStartGame()
+    interactor?.downloadQuestions()
+  }
+  
+  func viewWillAppear() {
+    view?.updateHighestScore(highestScore: UserDefaults.standard.integer(forKey: "highestScore"))
+  }
+  
   func errorOccured(error: Error) {
     view?.showError(error: error.localizedDescription)
     
@@ -32,14 +42,9 @@ extension HomePresenter: HomePresenterInterface {
     view?.enableStartGame()
   }
   
-  func viewDidLoad() {
-    view?.disableStartGame()
-    view?.hideScore()
-
-    interactor?.downloadQuestions()
-  }
+  
   
   func startGame() {
-    //
+    router?.showGameView(questions: questions)
   }
 }

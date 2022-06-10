@@ -35,7 +35,14 @@ class HomeRouter {
 // MARK: - HomeRouterInterface
 
 extension HomeRouter: HomeRouterInterface {
-  func showGameView() {
-    //
+  func showGameView(questions: [Question]) {
+    let quickViewController = QuizRouter.createModule(questions: questions)
+    quickViewController.modalPresentationStyle = .fullScreen
+    
+    let window = UIApplication.shared.keyWindow
+    guard let topView = window?.rootViewController?.topMostViewController() else { return }
+    topView.present(quickViewController,
+                    animated: true,
+                    completion: nil)
   }
 }

@@ -13,15 +13,15 @@ protocol HomeViewInterface: AnyObject {
   func disableStartGame()
   func enableStartGame()
   func showError(error: String)
-  func showScore()
-  func hideScore()
   func updateScore(score: String)
+  func updateHighestScore(highestScore: Int)
 }
 
 // MARK: - View -> Presenter
 
 protocol HomePresenterInterface: AnyObject {
   func viewDidLoad()
+  func viewWillAppear()
   func startGame()
   func questionsDownloaded(questions: [Question])
   func errorOccured(error: Error)
@@ -30,7 +30,7 @@ protocol HomePresenterInterface: AnyObject {
 // MARK: - Presenter -> Router
 
 protocol HomeRouterInterface: AnyObject {
-  func showGameView()
+  func showGameView(questions: [Question])
 }
 
 // MARK: - Presenter -> Interactor
