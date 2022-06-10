@@ -5,6 +5,12 @@ A quiz app for iOS platform built with Swift and VIPER architecture.
 # Architecturs
  - VIPER
 
+# Configuration
+
+ - Mac 12.4 - MacOS Monterey.
+ - Xcode 13.4.
+
+
 # Cloning and running
 
 git clone git@github.com:sam-s-7c0/TheQuiz.git
