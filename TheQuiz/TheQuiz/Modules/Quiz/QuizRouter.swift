@@ -36,4 +36,10 @@ class QuizRouter {
 
 // MARK: - QuizRouterInterface
 
-extension QuizRouter: QuizRouterInterface {}
+extension QuizRouter: QuizRouterInterface {
+  func dismissQuiz() {
+    let window = UIApplication.shared.keyWindow
+    guard let topView = window?.rootViewController?.topMostViewController() else { return }
+    topView.dismiss(animated: true)
+  }
+}

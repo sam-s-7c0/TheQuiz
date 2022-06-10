@@ -10,7 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
   // MARK: - Properties
   
-  @IBOutlet weak var stackviewScore: UIStackView!
+  @IBOutlet private weak var stackviewScore: UIStackView!
   @IBOutlet private weak var labelHighscore: UILabel!
   @IBOutlet private weak var buttonStartGame: UIButton!
   var presenter: HomePresenterInterface?
@@ -21,6 +21,12 @@ class HomeViewController: UIViewController {
     presenter?.viewDidLoad()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    presenter?.viewWillAppear()
+  }
+  
   @IBAction func actionStartGame(_ sender: UIButton) {
     presenter?.startGame()
   }
@@ -29,6 +35,13 @@ class HomeViewController: UIViewController {
 // MARK: - HomeViewInterface
 
 extension HomeViewController: HomeViewInterface {
+  func updateHighestScore(highestScore: Int) {
+    if highestScore > 0 {
+      self.stackviewScore.isHidden = false
+      self.labelHighscore.text = "\(highestScore)"
+    }
+  }
+  
   func showError(error: String) {
     DispatchQueue.main.async {
       let alertView = UIAlertController(title: "Error",

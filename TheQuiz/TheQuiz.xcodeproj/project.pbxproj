@@ -29,6 +29,9 @@
 		E086A09228534F300040720F /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086A09128534F300040720F /* QuizViewController.swift */; };
 		E086A09428534FFC0040720F /* Quiz.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E086A09328534FFC0040720F /* Quiz.storyboard */; };
 		E086A097285356A80040720F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086A096285356A80040720F /* UIViewController.swift */; };
+		E086A0992853616E0040720F /* RectBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086A0982853616E0040720F /* RectBorderButton.swift */; };
+		E086A09B285364A60040720F /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086A09A285364A60040720F /* UIImageView.swift */; };
+		E086A09D28536BB70040720F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E086A09C28536BB70040720F /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		E086A09128534F300040720F /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		E086A09328534FFC0040720F /* Quiz.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Quiz.storyboard; sourceTree = "<group>"; };
 		E086A096285356A80040720F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E086A0982853616E0040720F /* RectBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectBorderButton.swift; sourceTree = "<group>"; };
+		E086A09A285364A60040720F /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		E086A09C28536BB70040720F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,9 @@
 			children = (
 				E086A07D285339300040720F /* UIStoryboard.swift */,
 				E086A096285356A80040720F /* UIViewController.swift */,
+				E086A0982853616E0040720F /* RectBorderButton.swift */,
+				E086A09A285364A60040720F /* UIImageView.swift */,
+				E086A09C28536BB70040720F /* UserDefaults.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,11 +372,14 @@
 				E086A07B285337830040720F /* HomeRouter.swift in Sources */,
 				E086A09028534F060040720F /* QuizRouter.swift in Sources */,
 				E086A077285337750040720F /* HomeInterface.swift in Sources */,
+				E086A0992853616E0040720F /* RectBorderButton.swift in Sources */,
 				E086A07E285339300040720F /* UIStoryboard.swift in Sources */,
 				E086A08A28534EC00040720F /* QuizInteractor.swift in Sources */,
 				E086A05F285330DF0040720F /* Response.swift in Sources */,
 				E086A0732853373F0040720F /* HomeViewController.swift in Sources */,
+				E086A09D28536BB70040720F /* UserDefaults.swift in Sources */,
 				E086A08E28534EF00040720F /* QuizPresenter.swift in Sources */,
+				E086A09B285364A60040720F /* UIImageView.swift in Sources */,
 				E086A097285356A80040720F /* UIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

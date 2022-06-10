@@ -27,16 +27,29 @@ class QuizPresenter {
   var questionIndex: Int = 0
   var totalScore: Int = 0
   
+  var totalQuestionCount: Int {
+    questions.count
+  }
+  
+  var currentQuestionIndex: Int {
+    questionIndex+1
+  }
   
   private func checkIfAnswerIsCorrect(option: Options) {
     if option.rawValue == questions[questionIndex].correctAnswer {
       //This is correct answer
       updateScore()
+      view?.updateUICorrectAnswer(option: option.rawValue)
     } else {
       //This is wrong answer
+      view?.updateUIWrongAnswer(option: option.rawValue)
     }
     
     questionIndex+=1
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2.0) {
+      self.moveToNextQuestion()
+    }
   }
   
   private func updateScore() {
@@ -45,8 +58,21 @@ class QuizPresenter {
   }
   
   private func moveToNextQuestion() {
+    
+    if questionIndex == questions.count-1 {
+      UserDefaults.standard.saveScore(currentScore: totalScore)
+      router?.dismissQuiz()
+    }
+    
+    view?.enableOptions()
+    view?.resetOptions()
+    
     let question = questions[questionIndex]
     view?.updateQuestion(question: question)
+    
+    view?.updateHeaderStatus(currentQuestionIndex: currentQuestionIndex,
+                             totalQuestionCount: totalQuestionCount,
+                             totalScore: totalScore)
   }
 }
 
@@ -55,10 +81,13 @@ class QuizPresenter {
 extension QuizPresenter: QuizPresenterInterface {
   
   func viewDidLoad() {
-    
+    moveToNextQuestion()
   }
   
   func selectedOption(tag: Int) {
+    
+    view?.disableOptions()
+    
     switch tag  {
     case 1:
       self.checkIfAnswerIsCorrect(option: Options.A)

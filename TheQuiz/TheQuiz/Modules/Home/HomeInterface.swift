@@ -16,12 +16,14 @@ protocol HomeViewInterface: AnyObject {
   func showScore()
   func hideScore()
   func updateScore(score: String)
+  func updateHighestScore(highestScore: Int)
 }
 
 // MARK: - View -> Presenter
 
 protocol HomePresenterInterface: AnyObject {
   func viewDidLoad()
+  func viewWillAppear()
   func startGame()
   func questionsDownloaded(questions: [Question])
   func errorOccured(error: Error)
