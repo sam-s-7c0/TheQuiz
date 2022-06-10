@@ -13,8 +13,6 @@ protocol HomeViewInterface: AnyObject {
   func disableStartGame()
   func enableStartGame()
   func showError(error: String)
-  func showScore()
-  func hideScore()
   func updateScore(score: String)
   func updateHighestScore(highestScore: Int)
 }

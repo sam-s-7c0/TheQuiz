@@ -75,7 +75,6 @@
                     <connections>
                         <outlet property="buttonStartGame" destination="cne-bf-XKz" id="1D6-B8-qoj"/>
                         <outlet property="labelHighscore" destination="ehZ-wA-f3D" id="bfX-qs-BZy"/>
-                        <outlet property="stackviewScore" destination="Nw2-jI-3C2" id="dCZ-fk-G78"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

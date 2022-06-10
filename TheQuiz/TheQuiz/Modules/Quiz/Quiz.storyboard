@@ -37,10 +37,10 @@
                                 <rect key="frame" x="20" y="134" width="374" height="260"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="A0F-5O-zyZ">
-                                        <rect key="frame" x="112" y="20.5" width="150" height="219"/>
+                                        <rect key="frame" x="8" y="20.5" width="358" height="219"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yAD-pU-aAA">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="178.5"/>
+                                                <rect key="frame" x="104" y="0.0" width="150" height="178.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFg-eY-yC4">
                                                         <rect key="frame" x="73" y="0.0" width="4.5" height="20.5"/>
@@ -57,8 +57,8 @@
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-1d-WGC">
-                                                <rect key="frame" x="8" y="198.5" width="134" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVU-1d-WGC">
+                                                <rect key="frame" x="8" y="198.5" width="342" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -73,7 +73,9 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="A0F-5O-zyZ" firstAttribute="centerY" secondItem="aXv-4g-81B" secondAttribute="centerY" id="Et2-lN-AQm"/>
+                                    <constraint firstAttribute="trailing" secondItem="A0F-5O-zyZ" secondAttribute="trailing" constant="8" id="LFc-3A-VLd"/>
                                     <constraint firstAttribute="height" constant="260" id="SS1-dM-hoN"/>
+                                    <constraint firstItem="A0F-5O-zyZ" firstAttribute="leading" secondItem="aXv-4g-81B" secondAttribute="leading" constant="8" id="aPg-9k-1Cg"/>
                                     <constraint firstItem="A0F-5O-zyZ" firstAttribute="centerX" secondItem="aXv-4g-81B" secondAttribute="centerX" id="wLw-6z-9u5"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

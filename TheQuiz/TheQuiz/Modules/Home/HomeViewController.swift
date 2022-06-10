@@ -10,9 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
   // MARK: - Properties
   
-  @IBOutlet private weak var stackviewScore: UIStackView!
   @IBOutlet private weak var labelHighscore: UILabel!
   @IBOutlet private weak var buttonStartGame: UIButton!
+  
   var presenter: HomePresenterInterface?
   
   override func viewDidLoad() {
@@ -37,8 +37,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewInterface {
   func updateHighestScore(highestScore: Int) {
     if highestScore > 0 {
-      self.stackviewScore.isHidden = false
-      self.labelHighscore.text = "\(highestScore)"
+      self.labelHighscore.text = "\(highestScore) Punkte"
     }
   }
   
@@ -67,19 +66,7 @@ extension HomeViewController: HomeViewInterface {
       self.buttonStartGame.isEnabled = true
     }
   }
-  
-  func showScore() {
-    DispatchQueue.main.async {
-      self.stackviewScore.isHidden = false
-    }
-  }
-  
-  func hideScore() {
-    DispatchQueue.main.async {
-      self.stackviewScore.isHidden = true
-    }
-  }
-  
+    
   func updateScore(score: String) {
     labelHighscore.text = score
   }

@@ -24,10 +24,7 @@ class HomePresenter {
 extension HomePresenter: HomePresenterInterface {
   
   func viewDidLoad() {
-    
     view?.disableStartGame()
-    view?.hideScore()
-    
     interactor?.downloadQuestions()
   }
   

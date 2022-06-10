@@ -39,7 +39,7 @@ extension QuizViewController: QuizViewInterface {
   func updateHeaderStatus(currentQuestionIndex: Int,
                           totalQuestionCount: Int,
                           totalScore: Int) {
-    labelTotalScore.text = "\(currentQuestionIndex)/\(totalQuestionCount) Score: \(totalScore)"
+    labelTotalScore.text = "Frage \(currentQuestionIndex)/\(totalQuestionCount) - Akutelle Punktzahl: \(totalScore)"
   }
   
   
@@ -60,7 +60,7 @@ extension QuizViewController: QuizViewInterface {
   func updateQuestion(question: Question) {
     
     labelQuiz.text = question.question
-    labelScore.text = "\(question.score)"
+    labelScore.text = "\(question.score) Punkte"
     
     optionA.setTitle(question.answers.a, for: .normal)
     optionB.setTitle(question.answers.b, for: .normal)
