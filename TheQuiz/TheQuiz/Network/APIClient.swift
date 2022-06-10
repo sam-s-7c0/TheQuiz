@@ -27,6 +27,7 @@ public class APIClient {
                     print("Invalid Response")
                 }
             } else if let error = error {
+              completionHandler(.failure(error))
                 print("HTTP Request Failed \(error)")
             }
         }

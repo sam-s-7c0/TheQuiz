@@ -9,16 +9,32 @@ import UIKit
 
 // MARK: - Presenter -> View
 
-protocol HomeViewInterface: AnyObject {}
+protocol HomeViewInterface: AnyObject {
+  func disableStartGame()
+  func enableStartGame()
+  func showError(error: String)
+  func showScore()
+  func hideScore()
+  func updateScore(score: String)
+}
 
 // MARK: - View -> Presenter
 
-protocol HomePresenterInterface: AnyObject {}
+protocol HomePresenterInterface: AnyObject {
+  func viewDidLoad()
+  func startGame()
+  func questionsDownloaded(questions: [Question])
+  func errorOccured(error: Error)
+}
 
 // MARK: - Presenter -> Router
 
-protocol HomeRouterInterface: AnyObject {}
+protocol HomeRouterInterface: AnyObject {
+  func showGameView()
+}
 
 // MARK: - Presenter -> Interactor
 
-protocol HomeInteractorInterface: AnyObject {}
+protocol HomeInteractorInterface: AnyObject {
+  func downloadQuestions()
+}

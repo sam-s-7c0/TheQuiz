@@ -21,21 +21,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-l2-4Wd">
-                                <rect key="frame" x="158.5" y="408" width="97" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-wA-f3D">
-                                <rect key="frame" x="189" y="436" width="36" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-jI-3C2">
+                                <rect key="frame" x="158.5" y="422" width="97" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-l2-4Wd">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-wA-f3D">
+                                        <rect key="frame" x="42.5" y="28" width="12.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cne-bf-XKz">
                                 <rect key="frame" x="24" y="508.5" width="366" height="40"/>
-                                <color key="backgroundColor" red="0.42745098469999998" green="0.63137257099999999" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tXX-lh-sEz"/>
                                 </constraints>
@@ -57,21 +62,20 @@
                         <color key="backgroundColor" red="0.15294116739999999" green="0.36470589040000001" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Ixb-NL-pKR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2VI-3u-NwQ"/>
-                            <constraint firstItem="tXd-l2-4Wd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="54Y-15-b4v"/>
+                            <constraint firstItem="cne-bf-XKz" firstAttribute="top" secondItem="Nw2-jI-3C2" secondAttribute="bottom" constant="34.5" id="5eE-gc-uL2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cne-bf-XKz" secondAttribute="trailing" constant="24" id="9hv-jR-2Sc"/>
-                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="top" secondItem="tXd-l2-4Wd" secondAttribute="bottom" constant="4" id="CaB-jm-nSD"/>
-                            <constraint firstItem="tXd-l2-4Wd" firstAttribute="top" secondItem="eDR-6W-f3f" secondAttribute="bottom" constant="30" id="KTj-3m-wmF"/>
+                            <constraint firstItem="Nw2-jI-3C2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G8n-M6-eDx"/>
+                            <constraint firstItem="Nw2-jI-3C2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gh9-hz-LXC"/>
                             <constraint firstItem="eDR-6W-f3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfG-MR-V5S"/>
-                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8J-WA-7HB"/>
                             <constraint firstItem="eDR-6W-f3f" firstAttribute="top" secondItem="Ixb-NL-pKR" secondAttribute="bottom" constant="-50" id="QJe-GG-8ac"/>
-                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WJp-Ba-lKE"/>
-                            <constraint firstItem="cne-bf-XKz" firstAttribute="top" secondItem="ehZ-wA-f3D" secondAttribute="bottom" constant="48.5" id="qEu-nY-NYx"/>
+                            <constraint firstItem="Nw2-jI-3C2" firstAttribute="top" secondItem="Ixb-NL-pKR" secondAttribute="bottom" constant="20.5" id="sRb-6B-X0M"/>
                             <constraint firstItem="cne-bf-XKz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="yT0-Gi-sMi"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="buttonStartGame" destination="cne-bf-XKz" id="1D6-B8-qoj"/>
                         <outlet property="labelHighscore" destination="ehZ-wA-f3D" id="bfX-qs-BZy"/>
+                        <outlet property="stackviewScore" destination="Nw2-jI-3C2" id="dCZ-fk-G78"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

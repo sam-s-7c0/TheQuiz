@@ -34,4 +34,8 @@ class HomeRouter {
 
 // MARK: - HomeRouterInterface
 
-extension HomeRouter: HomeRouterInterface {}
+extension HomeRouter: HomeRouterInterface {
+  func showGameView() {
+    //
+  }
+}
