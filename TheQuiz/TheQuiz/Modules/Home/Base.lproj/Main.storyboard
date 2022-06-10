@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,17 +15,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxP-E9-lwg">
-                                <rect key="frame" x="186" y="438" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Das Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDR-6W-f3f">
+                                <rect key="frame" x="161.5" y="351.5" width="91" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-l2-4Wd">
+                                <rect key="frame" x="158.5" y="408" width="97" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-wA-f3D">
+                                <rect key="frame" x="189" y="436" width="36" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cne-bf-XKz">
+                                <rect key="frame" x="24" y="508.5" width="366" height="40"/>
+                                <color key="backgroundColor" red="0.42745098469999998" green="0.63137257099999999" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tXX-lh-sEz"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="START">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.42745098469999998" green="0.63137257099999999" blue="0.84313726430000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionStartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eRg-8J-Qf6"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check24logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ixb-NL-pKR">
+                                <rect key="frame" x="107" y="201.5" width="200" height="200"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.15294116739999999" green="0.36470589040000001" blue="0.63921570780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Ixb-NL-pKR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2VI-3u-NwQ"/>
+                            <constraint firstItem="tXd-l2-4Wd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="54Y-15-b4v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cne-bf-XKz" secondAttribute="trailing" constant="24" id="9hv-jR-2Sc"/>
+                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="top" secondItem="tXd-l2-4Wd" secondAttribute="bottom" constant="4" id="CaB-jm-nSD"/>
+                            <constraint firstItem="tXd-l2-4Wd" firstAttribute="top" secondItem="eDR-6W-f3f" secondAttribute="bottom" constant="30" id="KTj-3m-wmF"/>
+                            <constraint firstItem="eDR-6W-f3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfG-MR-V5S"/>
+                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q8J-WA-7HB"/>
+                            <constraint firstItem="eDR-6W-f3f" firstAttribute="top" secondItem="Ixb-NL-pKR" secondAttribute="bottom" constant="-50" id="QJe-GG-8ac"/>
+                            <constraint firstItem="ehZ-wA-f3D" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WJp-Ba-lKE"/>
+                            <constraint firstItem="cne-bf-XKz" firstAttribute="top" secondItem="ehZ-wA-f3D" secondAttribute="bottom" constant="48.5" id="qEu-nY-NYx"/>
+                            <constraint firstItem="cne-bf-XKz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="yT0-Gi-sMi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonStartGame" destination="cne-bf-XKz" id="1D6-B8-qoj"/>
+                        <outlet property="labelHighscore" destination="ehZ-wA-f3D" id="bfX-qs-BZy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,8 +80,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="check24logo" width="200" height="200"/>
     </resources>
 </document>

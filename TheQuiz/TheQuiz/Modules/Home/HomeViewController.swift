@@ -10,7 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     // MARK: - Properties
     
-    var presenter: HomePresenterInterface?
+  @IBOutlet private weak var labelHighscore: UILabel!
+  @IBOutlet private weak var buttonStartGame: UIButton!
+  var presenter: HomePresenterInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,10 @@ class HomeViewController: UIViewController {
         
         
     }
+  
+  @IBAction func actionStartGame(_ sender: UIButton) {
+    
+  }
 }
 
 // MARK: - HomeViewInterface
