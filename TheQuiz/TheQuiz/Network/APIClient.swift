@@ -7,9 +7,6 @@
 
 import Foundation
 
-//TODO: Remove ! to avoid crash
-//TODO: Remove remove print statements
-
 public class APIClient {
   
   static let shared = APIClient()
@@ -30,11 +27,9 @@ public class APIClient {
           completionHandler(.success(response.questions))
         } else {
           completionHandler(.failure(error!))
-          print("Invalid Response")
         }
       } else if let error = error {
         completionHandler(.failure(error))
-        print("HTTP Request Failed \(error)")
       }
     }
     
