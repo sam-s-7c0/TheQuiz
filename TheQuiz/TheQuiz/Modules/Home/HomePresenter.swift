@@ -40,6 +40,6 @@ extension HomePresenter: HomePresenterInterface {
   }
   
   func startGame() {
-    //
+    router?.showGameView(questions: questions)
   }
 }

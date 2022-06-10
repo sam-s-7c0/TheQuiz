@@ -30,7 +30,7 @@ protocol HomePresenterInterface: AnyObject {
 // MARK: - Presenter -> Router
 
 protocol HomeRouterInterface: AnyObject {
-  func showGameView()
+  func showGameView(questions: [Question])
 }
 
 // MARK: - Presenter -> Interactor

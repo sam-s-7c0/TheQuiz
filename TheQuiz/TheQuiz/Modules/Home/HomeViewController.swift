@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
   }
   
   @IBAction func actionStartGame(_ sender: UIButton) {
-    
+    presenter?.startGame()
   }
 }
 
@@ -31,9 +31,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewInterface {
   func showError(error: String) {
     DispatchQueue.main.async {
-    let alertView = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "Ok", style: .default)
-    alertView.addAction(okAction)
+      let alertView = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+      let okAction = UIAlertAction(title: "Ok", style: .default)
+      alertView.addAction(okAction)
       self.present(alertView, animated: true)
     }
   }

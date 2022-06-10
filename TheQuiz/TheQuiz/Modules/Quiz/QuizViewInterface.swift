@@ -9,16 +9,16 @@ import UIKit
 
 // MARK: - Presenter -> View
 
-protocol QuizViewInterface: class {}
+protocol QuizViewInterface: AnyObject {}
 
 // MARK: - View -> Presenter
 
-protocol QuizPresenterInterface: class {}
+protocol QuizPresenterInterface: AnyObject {}
 
 // MARK: - Presenter -> Router
 
-protocol QuizRouterInterface: class {}
+protocol QuizRouterInterface: AnyObject {}
 
 // MARK: - Presenter -> Interactor
 
-protocol QuizInteractorInterface: class {}
+protocol QuizInteractorInterface: AnyObject {}
