@@ -1,9 +1,9 @@
 
 # Description
-This is demo application. This demonstrates iOS App.
+A quiz app for iOS platform built with Swift and VIPER architecture.
 
-# Architecture
-VIPER is used to develop app.
+# Architecturs
+ - VIPER
 
 # Cloning and running
 
