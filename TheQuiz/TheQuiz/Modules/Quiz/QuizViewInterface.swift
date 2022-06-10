@@ -9,11 +9,16 @@ import UIKit
 
 // MARK: - Presenter -> View
 
-protocol QuizViewInterface: AnyObject {}
+protocol QuizViewInterface: AnyObject {
+  func updateQuestion(question: Question)
+}
 
 // MARK: - View -> Presenter
 
-protocol QuizPresenterInterface: AnyObject {}
+protocol QuizPresenterInterface: AnyObject {
+  func viewDidLoad()
+  func selectedOption(tag: Int)
+}
 
 // MARK: - Presenter -> Router
 

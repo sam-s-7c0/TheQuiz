@@ -15,4 +15,4 @@ class QuizInteractor {
 
 // MARK: - QuizInteractorInterface
 
-extension QuizInteractor: QuizInteractorInterface {}
+extension QuizInteractor: QuizInteractorInterface { }
